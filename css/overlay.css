@@ -47,7 +47,9 @@
   align-items: flex-end;
 }
 
-.navcontent div {
+.navcontent a {
+  margin-top: 10px;
+  margin-bottom: 10px;
   cursor: pointer;
   -webkit-transition: .15s ease-in-out;
   -moz-transition: .15s ease-in-out;
@@ -56,7 +58,7 @@
   opacity: 0;
 }
 
-.navcontent div:hover {
+.navcontent a:hover {
   transition: 0.1s;
   margin-right: 10px;
 }
@@ -67,7 +69,7 @@
   -o-transition: .15s ease-in-out;
   transition: .15s ease-in-out;
   transition-delay: 0.4s;
-  margin-top: 20px;
+  margin-top: 30px;
   background-color: white;
   width: 0px;
   height: 2px;
@@ -75,18 +77,18 @@
 }
 
 .navcontent.open span {
-  width: 60px;
+  width: 100px;
 }
 
-.navcontent.open div:nth-child(1) {
+.navcontent.open a:nth-child(1) {
   opacity: 1;
 }
 
-.navcontent.open div:nth-child(2) {
+.navcontent.open a:nth-child(2) {
   opacity: 1;
 }
 
-.navcontent.open div:nth-child(3) {
+.navcontent.open a:nth-child(3) {
   opacity: 1;
 }
 
@@ -97,39 +99,39 @@
   transition: .15s ease-in-out;
 }
 
-.navcontent.delayingclose div:nth-child(1) {
+.navcontent.delayingclose a:nth-child(1) {
   transition-delay: 0s;
 }
 
-.navcontent.delayingclose div:nth-child(2) {
+.navcontent.delayingclose a:nth-child(2) {
   transition-delay: 0.05s;
 }
 
-.navcontent.delayingclose div:nth-child(3) {
+.navcontent.delayingclose a:nth-child(3) {
   transition-delay: 0.1s;
 }
 
-.navcontent.delayingopen div:nth-child(1) {
+.navcontent.delayingopen a:nth-child(1) {
   transition-delay: 0.1s;
 }
 
-.navcontent.delayingopen div:nth-child(2) {
+.navcontent.delayingopen a:nth-child(2) {
   transition-delay: 0.2s;
 }
 
-.navcontent.delayingopen div:nth-child(3) {
+.navcontent.delayingopen a:nth-child(3) {
   transition-delay: 0.3s;
 }
 
-.navcontent.hidden div:nth-child(1) {
+.navcontent.hidden a:nth-child(1) {
   opacity: 0;
 }
 
-.navcontent.hidden div:nth-child(2) {
+.navcontent.hidden a:nth-child(2) {
   opacity: 0;
 }
 
-.navcontent.hidden div:nth-child(3) {
+.navcontent.hidden a:nth-child(3) {
   opacity: 0;
 }
 
