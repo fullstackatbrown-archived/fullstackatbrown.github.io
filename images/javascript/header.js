@@ -12,21 +12,18 @@ $(document).ready(function(){
       $('#overlay').toggleClass('open');
       $('#logo').toggleClass('invert');
       if ($('#navmenu').hasClass('open')) {
-        $('.navcontent').addClass('delayingclose');
+        $('.navcontent').addClass('delaying');
         $('.navcontent').addClass('hidden');
         $('.navcontent').removeClass('open');
         setTimeout(function(){
-          $('.navcontent').removeClass('delayingclose');
+          $('.navcontent').removeClass('delaying');
           $('#navmenu').removeClass('open');
           $('.navcontent').removeClass('hidden');
         }, 200);
       } else {
-        $('.navcontent').addClass('delayingopen');
+        $('.navcontent').addClass('delaying');
         $('#navmenu').addClass('open');
         $('.navcontent').addClass('open');
-        setTimeout(function(){
-          $('.navcontent').removeClass('delayingopen');
-        }, 200);
       }
     }
 	});
