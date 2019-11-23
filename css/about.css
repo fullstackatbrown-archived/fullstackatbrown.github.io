@@ -1,4 +1,13 @@
+.landingcontainer {
+  height: 700px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .landingtextcontainer {
+  width: 50%;
   z-index: 2;
   padding-left: 90px;
   padding-right: 40px;
@@ -12,5 +21,29 @@
 .landingcontainer sub{
   font-family: 'Raleway', sans-serif;
   font-size: 30px;
-  font-weight: 200;
+  font-weight: 100;
+}
+
+.landingimagecontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+}
+
+.note {
+  position: absolute;
+  -webkit-transition: -webkit-transform 2s linear;
+  opacity: 0;
+}
+
+.ParticleNoMouse {
+  opacity: 0;
+  position:absolute;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+  pointer-events:none;
 }

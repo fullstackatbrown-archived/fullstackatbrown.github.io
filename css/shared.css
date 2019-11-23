@@ -48,7 +48,12 @@ div {
 }
 
 .logocontainer{
+  transition: 0.2s;
+  cursor: pointer;
   z-index: 2;
+}
+.logocontainer:hover {
+  opacity: 0.8;
 }
 
 .logo {
