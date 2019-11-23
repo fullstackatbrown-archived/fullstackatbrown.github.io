@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="css/hamburger.css">
   <link rel="stylesheet" href="css/overlay.css">
   <script type="text/javascript" src="javascript/typewriter.js"></script>
+  <script type="text/javascript" src="javascript/contactform.js"></script>
   <script type="text/javascript" src="javascript/header.js"></script>
   <script type="text/javascript" src="javascript/misc.js"></script>
   <script type="text/javascript" src="javascript/goo.js"></script>
@@ -58,12 +59,13 @@
       <div id="mailingbutton" class="mailingbutton hvr-underline-from-left">
         Join the mailing list
       </div>
+      <div class="submissionresponse"> Your response has been recorded </div>
       <div id="mailingform" class="mailingform">
         <form name="gform" id="gform" enctype="text/plain"
               action="https://docs.google.com/forms/d/e/1FAIpQLScNP5BB3akbSkK-Jhx7dyHSdqz7DqSkUTsvYJGt8Vp7SnOAjw/formResponse?"
               target="hidden_iframe" onsubmit="submitted=true;">
-          <div><input type="text" placeholder="Name" name="entry.1974111008" id="entry.1974111008"><br></div>
-          <div><input type="text" placeholder="Email" name="entry.64288131" id="entry.64288131"></div>
+          <div><input class="emailinput" type="text" placeholder="Name" name="entry.1974111008" id="entry.1974111008"><br></div>
+          <div><input class="emailinput" type="text" placeholder="Email" name="entry.64288131" id="entry.64288131"></div>
           <div><input type="submit" class="submitbutton" value="Submit"></div>
         </form>
         <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
