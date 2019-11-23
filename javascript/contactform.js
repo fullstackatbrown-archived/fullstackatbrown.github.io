@@ -1,4 +1,8 @@
 $(document).ready(function(){
+  $(".mailingbutton").on("click", function(){
+    $('.mailingbutton').addClass('hidden');
+    $('#mailingform').addClass('visible');
+  });
 
   $('#gform').on('submit', function(e) {
     console.log($('#mailingform'))
@@ -9,7 +13,9 @@ $(document).ready(function(){
 
       setTimeout(function(){
         $('.submissionresponse').removeClass('visible');
-        $('#mailingbutton').removeClass('hidden');
+        setTimeout(function(){
+          $('.mailingbutton').removeClass('hidden');
+        }, 300);
       }, 2000);
     }, 1000);
   });

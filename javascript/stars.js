@@ -3,8 +3,8 @@ $(document).ready(function(){
   randomizeopacity(jQuery('#stars1'));
   randomizeopacity(jQuery('#stars2'));
   randomizeopacity(jQuery('#stars3'));
-  randomizeopacity(jQuery('#stars4'));
-  randomizeopacity(jQuery('#stars5'));
+  // randomizeopacity(jQuery('#stars4'));
+  // randomizeopacity(jQuery('#stars5'));
   function getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
@@ -26,14 +26,14 @@ $(document).ready(function(){
   }, getRandomInt(2000, 4000));
   var timer2 = setInterval(function () {
     randomizeopacity(jQuery('#stars2'));
-  }, getRandomInt(2000, 4000));
+  }, getRandomInt(3000, 5000));
   var timer3 = setInterval(function () {
     randomizeopacity(jQuery('#stars3'));
-  }, getRandomInt(2000, 4000));
-  var timer4 = setInterval(function () {
-    randomizeopacity(jQuery('#stars4'));
-  }, getRandomInt(2000, 4000));
-  var timer5 = setInterval(function () {
-    randomizeopacity(jQuery('#stars5'));
-  }, getRandomInt(2000, 4000));
+  }, getRandomInt(3000, 5000));
+  // var timer4 = setInterval(function () {
+  //   randomizeopacity(jQuery('#stars4'));
+  // }, getRandomInt(2000, 4000));
+  // var timer5 = setInterval(function () {
+  //   randomizeopacity(jQuery('#stars5'));
+  // }, getRandomInt(2000, 4000));
 });

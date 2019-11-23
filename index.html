@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="css/hamburger.css">
   <link rel="stylesheet" href="css/overlay.css">
   <script type="text/javascript" src="javascript/typewriter.js"></script>
+  <script type="text/javascript" src="javascript/mouseresponse.js"></script>
+  <script type="text/javascript" src="javascript/loadinghomepage.js"></script>
   <script type="text/javascript" src="javascript/contactform.js"></script>
   <script type="text/javascript" src="javascript/header.js"></script>
   <script type="text/javascript" src="javascript/misc.js"></script>
@@ -46,17 +48,17 @@
   <div class="spacer"></div>
   <div class="landingcontainer">
     <div class="landingtextcontainer">
-      <h1>
+      <h1 style="opacity: 0" id="1">
         Full Stack at Brown
       </h1>
-      <div style="margin-top: 10px;">
+      <div style="opacity: 0; margin-top: 10px;" id="2">
         <sub>
           Brown University's
           <span class="typewrite" data-period="2000" data-type='[ "design", "web", "mobile", "software engineering"]'></span>
           club
         </sub>
       </div>
-      <div id="mailingbutton" class="mailingbutton hvr-underline-from-left">
+      <div style="opacity: 0" id="3" class="mailingbutton hvr-underline-from-left">
         Join the mailing list
       </div>
       <div class="submissionresponse"> Your response has been recorded </div>
@@ -66,7 +68,7 @@
               target="hidden_iframe" onsubmit="submitted=true;">
           <div><input class="emailinput" type="text" placeholder="Name" name="entry.1974111008" id="entry.1974111008"><br></div>
           <div><input class="emailinput" type="text" placeholder="Email" name="entry.64288131" id="entry.64288131"></div>
-          <div><input type="submit" class="submitbutton" value="Submit"></div>
+          <div><input type="submit" class="submit" value="Submit"></div>
         </form>
         <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
       </div>
@@ -79,7 +81,7 @@
       <img src="images/stars/stars5.png" id="stars5" class="stars" />
       <img src="images/planet1.svg" id="planet1" class="planet" />
 
-    	<svg version="1.1" xmlns="http://www.w3.org/2000/svg" id="loader">
+    	<svg version="1.1" xmlns="http://www.w3.org/2000/svg" id="goosvg">
     		<defs>
     			<filter id="goo">
     				<feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
