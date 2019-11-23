@@ -1,8 +1,8 @@
 function closeHeader() {
   if ($(navmenu).hasClass("open")) {
-    $('#nav-icon').toggleClass('open');
-    $('#overlay').toggleClass('open');
-    $('#logo').toggleClass('invert');
+    $('#nav-icon').removeClass('open');
+    $('#overlay').removeClass('open');
+    $('#logo').addClass('invert');
     $('.navcontent').addClass('delayingclose');
     $('.navcontent').addClass('hidden');
     $('.navcontent').removeClass('open');
@@ -14,9 +14,14 @@ function closeHeader() {
   }
 }
 
+function closeFooter() {
+  $("footer").animate({opacity: 0}, 800);
+}
+
 // Home Page
 function homePackup() {
   closeHeader();
+  closeFooter();
   $(".blobcontainer").css({opacity: 0});
   for (let i = 1; i < 4; i++) {
     setTimeout(function(){
@@ -30,6 +35,7 @@ function homePackup() {
 // About Page
 function aboutPackup() {
   closeHeader();
+  closeFooter();
   for (let i = 1; i < 4; i++) {
     setTimeout(function(){
       $("#" + i).animate({
@@ -52,7 +58,6 @@ $(document).ready(function(){
 $(document).ready(function(){
     $('#homebutton').click(function(){
       if ($('body').attr('id') == "about") {
-        console.log("WIW")
         aboutPackup();
         setTimeout(function(){window.location.href="index.html"}, 800);
       }

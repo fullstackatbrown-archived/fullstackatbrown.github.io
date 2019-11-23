@@ -9,6 +9,17 @@ header {
   align-items: center;
 }
 
+footer {
+  position: fixed;
+  opacity: 0;
+  display: flex;
+  bottom: 0px;
+  height: 50px;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: center;
+}
+
 body {
   overflow-x: hidden;
   font-family: 'Raleway', sans-serif;
@@ -20,6 +31,22 @@ div {
 
 .spacer {
   height: 100px;
+}
+
+.logosmall {
+  border: 1px solid black;
+  margin-left: 8px;
+  height: 20px;
+  width: auto;
+}
+
+.footerCredit {
+  opacity: 0.5;
+  font-weight: 100;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-right:40px;
 }
 
 .headercontent {
