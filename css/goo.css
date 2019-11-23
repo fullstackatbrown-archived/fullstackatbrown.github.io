@@ -1,0 +1,40 @@
+.blobcontainer {
+ width: 50%;
+ height: 100%;
+}
+
+.blobcontainer:before {
+ content: "";
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ left: 0;
+ top: 0px;
+ opacity: 0.05;
+ z-index: 0;
+}
+
+#loader {
+	display: inline-block;
+	position: relative;
+	width: 800px;
+	height: 800px;
+	top: 50%;
+	left: 50%;
+	margin-left: -400px;
+	margin-top: -400px;
+}
+
+rect {
+ -webkit-transform-origin: 50% 50%;
+ transform-origin: 50% 50%;
+}
+
+.blobs {
+ -webkit-filter: url("#goo");
+ filter: url("#goo");
+}
+
+.blob {
+	fill: white;
+}

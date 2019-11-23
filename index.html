@@ -1,12 +1,17 @@
 <html>
 <head>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800|Roboto+Slab:100,200,300,400,500,600,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" integrity="sha256-c+C87jupO1otD1I5uyxV68WmSLCqtIoNlcHLXtzLCT0=" crossorigin="anonymous" />
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/goo.css">
   <link rel="stylesheet" href="css/hamburger.css">
   <link rel="stylesheet" href="css/overlay.css">
+  <script type="text/javascript" src="javascript/typewriter.js"></script>
   <script type="text/javascript" src="javascript/header.js"></script>
+  <script type="text/javascript" src="javascript/goo.js"></script>
+  <script type="text/javascript" src="javascript/stars.js"></script>
   <link rel="icon" type="image/png" href="images/f.png">
   <title>Full Stack at Brown</title>
 </head>
@@ -36,9 +41,54 @@
 </header>
 <body>
   <div class="spacer"></div>
-  <div>
-    fsadfsad
+  <div class="landingcontainer">
+    <div class="landingtextcontainer">
+      <h1>
+        Full Stack at Brown
+      </h1>
+      <div style="margin-top: 10px;">
+        <sub>
+          Brown Universitys'
+          <span class="typewrite" data-period="2000" data-type='[ "design", "web", "mobile", "software engineering"]'></span>
+          club
+        </sub>
+      </div>
+    </div>
+  <div class="blobcontainer">
+    <img src="images/stars/stars1.png" id="stars1" class="stars" />
+    <img src="images/stars/stars2.png" id="stars2" class="stars" />
+    <img src="images/stars/stars3.png" id="stars3" class="stars" />
+    <img src="images/stars/stars4.png" id="stars4" class="stars" />
+    <img src="images/stars/stars5.png" id="stars5" class="stars" />
+    <img src="images/planet1.svg" id="planet1" class="planet" />
+
+  	<svg version="1.1" xmlns="http://www.w3.org/2000/svg" id="loader">
+  		<defs>
+  			<filter id="goo">
+  				<feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+  				<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+  				<feBlend in2="goo" in="SourceGraphic" result="mix" />
+  			</filter>
+  			<linearGradient id="MyGradient">
+  					<stop offset="5%"  stop-color="#200140"/>
+  					<stop offset="40%" stop-color="#0a0073"/>
+  					<stop offset="100%" stop-color="#6f0075"/>
+  			</linearGradient>
+        <style>.cls-1{fill:#fff;}</style>
+  		</defs>
+  		<mask id="maska">
+  			<g class="blobs">
+  				<circle class="blob" cx="430" cy="600" r="60" transform="rotate(0) translate(0, 0) rotate(0)"/>
+  				<circle class="blob" cx="540" cy="300" r="140"  transform="rotate(0) translate(0, 0) rotate(0)"/>
+  				<circle class="blob" cx="420" cy="180" r="80"  transform="rotate(0) translate(0, 0) rotate(0)"/>
+  				<circle class="blob" cx="330" cy="440" r="160"  transform="rotate(0) translate(0, 0) rotate(0)"/>
+  				<circle class="blob" cx="140" cy="400" r="40"  transform="rotate(0) translate(0, 0) rotate(0)"/>
+  			</g>
+  		</mask>
+  		<rect x="0" y="0" mask="url(#maska)" fill="url(#MyGradient)" width="800" height="800" />
+  	</svg>
   </div>
+</div>
   <!-- <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLScNP5BB3akbSkK-Jhx7dyHSdqz7DqSkUTsvYJGt8Vp7SnOAjw/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
     First name:<br>
     <input type="text" name="entry.1974111008" id="entry.1974111008"><br>

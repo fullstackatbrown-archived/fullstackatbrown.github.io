@@ -2,7 +2,7 @@ header {
   position: fixed;
   width: 100%;
   height: 100px;
-  z-index: 2;
+  z-index: 4;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -10,8 +10,8 @@ header {
 }
 
 body {
+  overflow-x: hidden;
   font-family: 'Raleway', sans-serif;
-  height: 6000px;
 }
 
 div {
@@ -20,9 +20,27 @@ div {
 
 .headerblock {
   background-color: white;
+  z-index: 3;
   position: fixed;
   width: 100%;
   height: 100px;
+}
+
+.planet {
+  position: absolute;
+  z-index: 2;
+  height: 600px;
+  width: 600px;
+}
+.stars {
+  position: absolute;
+  z-index: 1;
+  width: auto;
+  height: 700px;
+  -webkit-transition: .85s ease-in-out;
+  -moz-transition: .85s ease-in-out;
+  -o-transition: .85s ease-in-out;
+  transition: .85s ease-in-out;
 }
 
 .headercontent {
@@ -60,4 +78,27 @@ div {
 
 .spacer {
   height: 100px;
+}
+
+.landingcontainer {
+  height: 700px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.landingtextcontainer {
+  padding-left: 90px;
+}
+
+.landingcontainer h1{
+  font-size: 50px;
+  font-weight: 200;
+}
+
+.landingcontainer sub{
+  font-family: 'Raleway', sans-serif;
+  font-size: 30px;
+  font-weight: 200;
 }
