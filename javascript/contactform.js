@@ -1,5 +1,6 @@
-var submitted=false;
-$('#gform').on('submit', function(e) {
-  $('#gform *').fadeOut(2000);
-  $('#gform').prepend('Your submission has been processed...');
+$(document).ready(function(){
+  $('#gform').on('submit', function(e) {
+    console.log($('#mailingform'))
+    $('#mailingform').removeClass('visible');
+  });
 });
