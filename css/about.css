@@ -1,0 +1,16 @@
+.landingtextcontainer {
+  z-index: 2;
+  padding-left: 90px;
+  padding-right: 40px;
+}
+
+.landingcontainer h1{
+  font-size: 50px;
+  font-weight: 200;
+}
+
+.landingcontainer sub{
+  font-family: 'Raleway', sans-serif;
+  font-size: 30px;
+  font-weight: 200;
+}

@@ -8,7 +8,7 @@ $(document).ready(function(){
       setTimeout(function(){
         ready = true;
       }, 500);
-  		$(this).toggleClass('open');
+  		$("#nav-icon").toggleClass('open');
       $('#overlay').toggleClass('open');
       $('#logo').toggleClass('invert');
       if ($('#navmenu').hasClass('open')) {

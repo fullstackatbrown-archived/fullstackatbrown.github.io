@@ -1,3 +1,68 @@
+header {
+  position: fixed;
+  width: 100%;
+  height: 100px;
+  z-index: 4;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: 'Raleway', sans-serif;
+}
+
+div {
+  font-family: 'Roboto Slab', serif;
+}
+
+.spacer {
+  height: 100px;
+}
+
+.headercontent {
+  width: 100vw;
+  padding-left: 40px;
+  padding-right: 40px;
+  height: 100px;
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headerblock {
+  background-color: white;
+  z-index: 3;
+  position: fixed;
+  width: 100%;
+  height: 100px;
+}
+
+.icon-bar {
+  width: 22px;
+  transition: all 0.2s;
+}
+
+.logocontainer{
+  z-index: 2;
+}
+
+.logo {
+  z-index: 2;
+  max-width: 90px;
+  height: auto;
+}
+
+.invert {
+  transition: 0.3s;
+  -webkit-filter: brightness(0) invert(1);
+  filter: brightness(0) invert(1);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -97,10 +162,10 @@
 
 /* hover styles */
 #nav-icon:hover span:nth-child(1) {
+  margin-left: 0%;
+  width: 100%;
   -webkit-transition: .15s ease-in-out;
   -moz-transition: .15s ease-in-out;
   -o-transition: .15s ease-in-out;
   transition: .15s ease-in-out;
-  margin-left: 0%;
-  width: 100%;
 }
