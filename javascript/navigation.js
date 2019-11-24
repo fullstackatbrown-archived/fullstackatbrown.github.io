@@ -36,7 +36,33 @@ function homePackup() {
 function aboutPackup() {
   closeHeader();
   closeFooter();
+  for (let i = 1; i < 5; i++) {
+    setTimeout(function(){
+      $("#" + i).animate({
+        opacity: 0
+      }, 550)
+    }, (i*50)+100);
+  }
+}
+
+// Projects Page
+function projectsPackup() {
+  closeHeader();
+  closeFooter();
   for (let i = 1; i < 4; i++) {
+    setTimeout(function(){
+      $("#" + i).animate({
+        opacity: 0
+      }, 550)
+    }, (i*50)+100);
+  }
+}
+
+// Contact Page
+function contactPackup() {
+  closeHeader();
+  closeFooter();
+  for (let i = 1; i < 7; i++) {
     setTimeout(function(){
       $("#" + i).animate({
         opacity: 0
@@ -52,10 +78,26 @@ $(document).ready(function(){
       homePackup();
       setTimeout(function(){window.location.href="about.html";}, 800);
     }
+    if ($('body').attr('id') == "projects") {
+      projectsPackup();
+      setTimeout(function(){window.location.href="about.html"}, 800);
+    }
+    if ($('body').attr('id') == "contact") {
+      contactPackup();
+      setTimeout(function(){window.location.href="about.html"}, 800);
+    }
   })
   $('#homebutton').click(function(){
     if ($('body').attr('id') == "about") {
       aboutPackup();
+      setTimeout(function(){window.location.href="index.html"}, 800);
+    }
+    if ($('body').attr('id') == "projects") {
+      projectsPackup();
+      setTimeout(function(){window.location.href="index.html"}, 800);
+    }
+    if ($('body').attr('id') == "contact") {
+      contactPackup();
       setTimeout(function(){window.location.href="index.html"}, 800);
     }
   })
@@ -67,6 +109,24 @@ $(document).ready(function(){
     if ($('body').attr('id') == "home") {
       homePackup();
       setTimeout(function(){window.location.href="projects.html";}, 800);
+    }
+    if ($('body').attr('id') == "contact") {
+      contactPackup();
+      setTimeout(function(){window.location.href="projects.html"}, 800);
+    }
+  })
+  $('#contactbutton').click(function(){
+    if ($('body').attr('id') == "about") {
+      aboutPackup();
+      setTimeout(function(){window.location.href="contact.html"}, 800);
+    }
+    if ($('body').attr('id') == "home") {
+      homePackup();
+      setTimeout(function(){window.location.href="contact.html";}, 800);
+    }
+    if ($('body').attr('id') == "projects") {
+      projectsPackup();
+      setTimeout(function(){window.location.href="contact.html";}, 800);
     }
   })
 })

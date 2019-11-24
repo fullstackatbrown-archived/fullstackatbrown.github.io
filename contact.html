@@ -5,13 +5,13 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800|Roboto+Slab:100,200,300,400,500,600,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/hover.css">
-  <link rel="stylesheet" href="css/projects.css">
+  <link rel="stylesheet" href="css/contact.css">
   <link rel="stylesheet" href="css/shared.css">
   <link rel="stylesheet" href="css/overlay.css">
-  <script type="text/javascript" src="javascript/fire.js"></script>
   <script type="text/javascript" src="javascript/navigation.js"></script>
   <script type="text/javascript" src="javascript/loading.js"></script>
   <script type="text/javascript" src="javascript/header.js"></script>
+  <script type="text/javascript"> var submitted=false;</script>
   <link rel="icon" type="image/png" href="images/f.png">
   <title>Full Stack at Brown</title>
 </head>
@@ -39,29 +39,46 @@
     </div>
   </div>
 </header>
-<body id="projects">
+<body id="contact">
 <div class="spacer"></div>
 <div class="landingcontainer">
   <div class="landingtextcontainer">
     <h1 style="opacity: 0" id="2">
-      Projects
+      Contact
     </h1>
     <div style="margin-top: 20px;">
       <sub style="opacity: 0" id="3">
-        This page is under construction. Full Stack at Brown's first year has
-        not begun yet, if you would like to be a part of the first fsab cohort
-        apply now!
+        If you would like to have Full Stack at Brown complete a project
+        for you or your organization, please fill out this form
       </sub>
     </div>
-
-  </div>
-  <div style="opacity: 0" id="1" class="landingimagecontainer">
-    <div class="shipcontainer">
-    <img id="ship" src="images/rocket.svg" height="60%" width="auto"/>
-    <img id="window" class="window" src="images/window.svg" height="60%" width="auto"/>
+    <div style="opacity: 0" id="4">
+      <form class="gform" name="gform" id="gform" enctype="text/plain"
+            action="https://docs.google.com/forms/d/e/1FAIpQLScNP5BB3akbSkK-Jhx7dyHSdqz7DqSkUTsvYJGt8Vp7SnOAjw/formResponse?"
+            target="hidden_iframe" onsubmit="submitted=true;">
+        <div><input required autocomplete="off" class="emailinput" type="text" placeholder="Inquiring about..." name="entry.1974111008" id="entry.1974111008"><br></div>
+        <div class="inputrow">
+          <input required type="text" placeholder="Name" name="entry.64288131" id="entry.64288131">
+          <input required type="text" placeholder="Email" name="entry.64288131" id="entry.64288131">
+        </div>
+        <textarea placeholder="Project description..."></textarea>
+        <div><input type="submit" class="submit" value="Submit"></div>
+      </form>
+      <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
     </div>
-  </div>
 
+  </div>
+</div>
+<div style="opacity: 0" id="5" class="emailsection">
+  Email Us
+  <a href="mailto: fullstackatbrown@gmail.com" class="emaillink hvr-sweep-to-right">
+    fullstackatbrown@gmail.com
+  </a>
+</div>
+<div style="opacity: 0" id="6" class="addresssection">
+  <img class="brownlogo" src="images/brownlogo.png"/>
+  <div class="addresstext">Brown University</div>
+  <div class="addresstext">Providence RI</div>
 </div>
 </body>
 <footer>

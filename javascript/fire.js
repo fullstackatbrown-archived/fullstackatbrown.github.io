@@ -1,23 +1,33 @@
-var total = 6;
+var total = 60;
 let duration = 1300;
 var mousevector = [0, 0];
+let variance = 4;
+
+function LightenDarkenColor(col, amt) {
+    var usePound = false;
+    if (col[0] == "#") {
+        col = col.slice(1);
+        usePound = true;
+    }
+    var num = parseInt(col,16);
+    var r = (num >> 16) + amt;
+    if (r > 255) r = 255;
+    else if  (r < 0) r = 0;
+    var b = ((num >> 8) & 0x00FF) + amt;
+    if (b > 255) b = 255;
+    else if  (b < 0) b = 0;
+    var g = (num & 0x0000FF) + amt;
+    if (g > 255) g = 255;
+    else if (g < 0) g = 0;
+    return (usePound?"#":"") + (g | (b << 8) | (r << 16)).toString(16);
+}
 
 // parallaxing ship
 $(document).ready(function(){
-  // $("#window").css({
-  //   top: $("#ship").offset().top+90,
-  //   left: $("#ship").offset().left+173,
-  // });
-  // $(window).resize(function() {
-  //   $("#window").css({
-  //     top: $("#ship").offset().top+90,
-  //     left: $("#ship").offset().left+173,
-  //   });
-  // })
-
   $(".landingimagecontainer").mousemove(function(e) {
     parallaxIt(e, "#ship", -10);
     parallaxIt(e, "#window", -7);
+    flameAdjust(e);
   });
 
   function parallaxIt(e, target, movement) {
@@ -30,13 +40,24 @@ $(document).ready(function(){
       y: (relY - $this.height() / 2) / $this.height() * movement
     });
   }
+
+  function flameAdjust(e) {
+    var $this = $("#ship");
+    var relX = e.pageX - ($this.offset().left + 95);
+    var relY = e.pageY - ($this.offset().top + 355);
+    variance = 4+(200*(1/Math.sqrt((relX*relX)+(relY*relY))))
+    // clamp variance at 12
+    if (variance > 12) {
+      variance = 12;
+    }
+  }
 });
 
 // music flames code
 function Flame() {
 	this.element = $.parseHTML(`<svg style="z-index: -1" height="100" width="100">
                                 <circle cx="50" cy="50" r="40"
-                                        stroke-width="3" fill="#e0e0e0" />
+                                        stroke-width="3" fill="` + LightenDarkenColor("#e0e0e0", -(variance*3)) + `" />
                               </svg>`)
 	this.speed().display().newPoint().fly();
 };
@@ -48,7 +69,7 @@ Flame.prototype.speed = function() {
 };
 
 Flame.prototype.newPoint = function() {
-	this.pointX = $("#ship").offset().left -365 + randomRange(-150, 150);
+	this.pointX = $("#ship").offset().left -365 + randomRange(-20*variance, 20*variance);
 	this.pointY = $(window).height()+500;
 	return this;
 };
@@ -69,9 +90,7 @@ Flame.prototype.fly = function() {
 	$(this.element).animate({
 		"top": this.pointY,
 		"left": this.pointX,
-	}, this.duration, 'linear', function(){
-		self.speed().newPoint().fly();
-	});
+	}, this.duration, 'linear');
 };
 
 function randomInt(max) {
@@ -84,24 +103,20 @@ function randomRange(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
 
-function createFlameInstant(i) {
-  let flame = new Flame();
-  let timer1 = setTimeout(function(){
-    $(flame.element).remove();
-  }, flame.duration)
-}
 
-function createFlameInterval(i) {
+function createFlameInterval() {
+  let flames = []
   let spacing = 240
-  createFlameInstant(i, total)
+  let i = 0;
   setInterval(function() {
-    let flame = new Flame();
-    setTimeout(function(){
-      $(flame.element).remove();
-    }, 600)
+    flames[i%total] = new Flame();
+    if (flames[(i+1)%total] !== undefined) {
+      $(flames[(i+1)%total].element).remove()
+    }
+    i++
   }, 30)
 }
 
 $(function(){
-    createFlameInterval(0);
+    createFlameInterval();
 });

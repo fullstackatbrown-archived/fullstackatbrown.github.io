@@ -26,7 +26,7 @@
   <div class="navcontent">
     <a id="aboutbutton" class="hvr-sweep-to-right"> About </a>
     <a id="projectsbutton" class="hvr-sweep-to-right"> Projects </a>
-    <a class="hvr-sweep-to-right"> Contact </a>
+    <a id="contactbutton" class="hvr-sweep-to-right"> Contact </a>
     <span></span>
   </div>
 </div>
@@ -65,11 +65,11 @@
         </div>
         <div class="submissionresponse"> Your response has been recorded </div>
         <div id="mailingform" class="mailingform">
-          <form name="gform" id="gform" enctype="text/plain"
+          <form class="gform" name="gform" id="gform" enctype="text/plain"
                 action="https://docs.google.com/forms/d/e/1FAIpQLScNP5BB3akbSkK-Jhx7dyHSdqz7DqSkUTsvYJGt8Vp7SnOAjw/formResponse?"
                 target="hidden_iframe" onsubmit="submitted=true;">
-            <div><input class="emailinput" type="text" placeholder="Name" name="entry.1974111008" id="entry.1974111008"><br></div>
-            <div><input class="emailinput" type="text" placeholder="Email" name="entry.64288131" id="entry.64288131"></div>
+            <div><input required class="emailinput" type="text" placeholder="Name" name="entry.1974111008" id="entry.1974111008"><br></div>
+            <div><input required class="emailinput" type="text" placeholder="Email" name="entry.64288131" id="entry.64288131"></div>
             <div><input type="submit" class="submit" value="Submit"></div>
           </form>
           <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>

@@ -1189,19 +1189,19 @@
   transition-property: color, background-color;
 }
 .hvr-fade:hover, .hvr-fade:focus, .hvr-fade:active {
-  background-color: #2098D1;
+  background-color: #b4a0eb;
   color: white;
 }
 
 /* Back Pulse */
 @-webkit-keyframes hvr-back-pulse {
   50% {
-    background-color: rgba(32, 152, 209, 0.75);
+    background-color: black;
   }
 }
 @keyframes hvr-back-pulse {
   50% {
-    background-color: rgba(32, 152, 209, 0.75);
+    background-color: #b7aded;
   }
 }
 .hvr-back-pulse {
@@ -1227,9 +1227,9 @@
   animation-timing-function: linear;
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
-  background-color: #2098D1;
-  background-color: #2098d1;
-  color: white;
+  background-color: #b4a0eb;
+  background-color: #b4a0eb;
+  color: black;
 }
 
 /* Sweep To Right */

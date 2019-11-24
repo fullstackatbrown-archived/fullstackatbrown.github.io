@@ -13,7 +13,29 @@ $(document).ready(function(){
 
   // About page
   if ($('body').attr('id') == "about") {
+    for (let i = 1; i < 5; i++) {
+      setTimeout(function(){
+        $("#" + i).animate({
+          opacity: 1
+        }, 850)
+      }, (i-1)*100);
+    }
+  }
+
+  // Projects page
+  if ($('body').attr('id') == "projects") {
     for (let i = 1; i < 4; i++) {
+      setTimeout(function(){
+        $("#" + i).animate({
+          opacity: 1
+        }, 850)
+      }, (i-1)*100);
+    }
+  }
+
+  // Contact page
+  if ($('body').attr('id') == "contact") {
+    for (let i = 1; i < 7; i++) {
       setTimeout(function(){
         $("#" + i).animate({
           opacity: 1
