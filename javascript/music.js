@@ -6,7 +6,7 @@ let notes = {};
 // parallaxing bear
 $(document).ready(function(){
   $(".landingimagecontainer").mousemove(function(e) {
-    parallaxIt(e, "#bear", -3);
+    parallaxIt(e, "#bear", -6);
   });
 
   function parallaxIt(e, target, movement) {

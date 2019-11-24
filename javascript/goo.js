@@ -2,8 +2,30 @@ var cananimate = true;
 
 // Detect if chrome
 var isChrome = !!window.chrome
+let origins = ['440px 600px', '540px 310px', '430px 180px', '330px 445px', '134px 400px'];
 
 $(document).ready(function(){
+  function stopAnimation() {
+    $('#animationtoggle').text("Start Animation");
+    $(".blob").each(function(index) {
+      $(this).css({'animation': 'none'});
+    });
+  }
+
+  function startAnimation() {
+    $('#animationtoggle').text("Stop Animation");
+    $(".blob").each(function(index) {
+      $(this).css({'animation': 'circle 4s linear infinite'});
+    });
+  }
+  $('#animationtoggle').click(function(){
+    console.log($('#animationtoggle').text())
+    if ($('#animationtoggle').text() === "Stop Animation") {
+      stopAnimation();
+    } else {
+      startAnimation();
+    }
+  })
 
   // Detects if browser can handle animation
   let starttime = new Date();
@@ -24,6 +46,7 @@ $(document).ready(function(){
             $(this).css({'animation': 'none'});
           });
           cananimate = false;
+          stopAnimation()
         } else {
           console.log((total/200) + "fps continuing animation")
         }
@@ -31,16 +54,16 @@ $(document).ready(function(){
   }
 
 
+  $(".blob").each(function(index) {
+    $(this).css({'transform-origin': origins[index]});
+  })
+
   if (isChrome) {
     // Test if browser can handle animation
     fpsLoopId = setInterval(fpsLoop, 10);
     // Goo JQuery animation
     var radius = 8;
-    let origins = ['440px 600px', '540px 310px', '430px 180px', '330px 445px', '134px 400px'];
-    $(".blob").each(function(index) {
-      $(this).css({'transform-origin': origins[index]});
-      $(this).css({'animation': 'circle 4s linear infinite'});
-    });
+    startAnimation()
   }
 
   // TweenMax implementation, saved for possible optimization
