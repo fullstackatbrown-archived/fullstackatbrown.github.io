@@ -2,6 +2,9 @@ var total = 60;
 let duration = 1300;
 var mousevector = [0, 0];
 let variance = 4;
+// radians
+let angle = 0.506145;
+let hypotenuse = 1000;
 
 function LightenDarkenColor(col, amt) {
     var usePound = false;
@@ -69,8 +72,9 @@ Flame.prototype.speed = function() {
 };
 
 Flame.prototype.newPoint = function() {
-	this.pointX = $("#ship").offset().left -365 + randomRange(-20*variance, 20*variance);
-	this.pointY = $(window).height()+500;
+	this.pointX = $("#ship").offset().left - (Math.asin(angle)*hypotenuse) + randomRange(-20*variance, 20*variance);
+	this.pointY = $("#ship").offset().top + 400 + (Math.acos(angle)*hypotenuse);
+  console.log($("#ship").offset().top + 200 + (Math.acos(angle)*hypotenuse))
 	return this;
 };
 
@@ -87,6 +91,7 @@ Flame.prototype.display = function() {
 //	Animate Flame Movements
 Flame.prototype.fly = function() {
 	var self = this;
+  $(this.element).animate({"opacity": 0}, {duration: 600, queue: false})
 	$(this.element).animate({
 		"top": this.pointY,
 		"left": this.pointX,
