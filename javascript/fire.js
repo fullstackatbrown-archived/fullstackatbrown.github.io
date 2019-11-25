@@ -119,7 +119,7 @@ function createFlameInterval() {
       $(flames[(i+1)%total].element).remove()
     }
     i++
-  }, 30)
+  }, 10)
 }
 
 $(function(){
