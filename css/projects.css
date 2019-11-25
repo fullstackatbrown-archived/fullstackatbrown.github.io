@@ -4,6 +4,7 @@ body {
 }
 
 .landingcontainer {
+  overflow: hidden;
   height: 700px;
   display: flex;
   flex-direction: row;
