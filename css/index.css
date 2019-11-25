@@ -1,3 +1,8 @@
+body {
+  height: 100vh;
+  overflow: hidden;
+}
+
 .planet {
   position: absolute;
   z-index: 2;
@@ -25,7 +30,10 @@
 }
 
 .landingtextcontainer {
-  width: 50%;
+  background-color: white;
+  z-index: 50;
+  border-radius: 25px;
+  width: 40%;
   z-index: 2;
   padding-left: 90px;
   padding-right: 40px;
@@ -72,6 +80,7 @@
 }
 
 .mailingform {
+  width: 50%;
   height: 0;
   overflow: hidden;
   -webkit-transition: .15s ease-in-out;
@@ -83,28 +92,10 @@
 
 .mailingform.visible {
   height: 195px;
-  width: 50%;
 }
 
 .gform {
   width: 100%;
-}
-
-.submissionresponse {
-  z-index: -1;
-  font-family: 'Raleway', sans-serif;
-  font-size: 24px;
-  font-weight: 100;
-  position: absolute;
-  -webkit-transition: .25s ease-in-out;
-  -moz-transition: .25s ease-in-out;
-  -o-transition: .25s ease-in-out;
-  transition: .25s ease-in-out;
-  opacity: 0;
-  margin-top: 18px;
-}
-.submissionresponse.visible {
-  opacity: 1;
 }
 
 .loader {

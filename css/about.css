@@ -7,10 +7,10 @@
 }
 
 .landingtextcontainer {
-  width: 50%;
+  width: 55%;
   z-index: 2;
   padding-left: 90px;
-  padding-right: 40px;
+  padding-right: 90px;
 }
 
 .landingcontainer h1{
@@ -27,10 +27,11 @@
 }
 
 .landingimagecontainer {
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50%;
+  width: 45%;
   height: 100%;
 }
 
@@ -80,4 +81,13 @@
   -ms-user-select:none;
   user-select:none;
   pointer-events:none;
+}
+
+@media only screen and (max-width: 800px) {
+  .landingtextcontainer {
+    width: 100%;
+  }
+  .landingimagecontainer {
+    width: 0px;
+  }
 }

@@ -99,9 +99,11 @@ textarea::placeholder {
 
 textarea:hover {
   height: 60px;
+  border-bottom-color: #7d7d7d;
 }
 textarea:focus {
   height: 100px;
+  border-bottom-color: black;
 }
 
 header {
@@ -124,6 +126,7 @@ footer {
   width: 100%;
   justify-content: flex-end;
   align-items: center;
+  z-index: 4;
 }
 
 body {
@@ -157,6 +160,7 @@ div {
 
 .footerCredit.button {
   cursor: pointer;
+  padding: 5px;
 }
 .footerCredit.button:hover {
   transition: 0.3s;
@@ -201,6 +205,23 @@ div {
   z-index: 2;
   max-width: 90px;
   height: auto;
+}
+
+.submissionresponse {
+  z-index: -1;
+  font-family: 'Raleway', sans-serif;
+  font-size: 24px;
+  font-weight: 100;
+  position: absolute;
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+  opacity: 0;
+  margin-top: 18px;
+}
+.submissionresponse.visible {
+  opacity: 1;
 }
 
 .invert {

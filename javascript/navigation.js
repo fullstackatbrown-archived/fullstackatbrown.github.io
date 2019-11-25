@@ -76,12 +76,7 @@ $(document).ready(function(){
   $('#aboutbutton').click(function(){
     if ($('body').attr('id') == "home") {
       homePackup();
-      setTimeout(function () { window.location.href = "about.html"; }, 800);
-    }
-
-    if ($('body').attr('id') == "about") {
-      aboutPackup();
-      setTimeout(function () { window.location.href = "about.html"; }, 800);
+      setTimeout(function () { window.location.href = "about.html"}, 800);
     }
     if ($('body').attr('id') == "projects") {
       projectsPackup();
@@ -95,7 +90,7 @@ $(document).ready(function(){
   $('#homebutton').click(function () {
     if ($('body').attr('id') == "about") {
       aboutPackup();
-      setTimeout(function () { window.location.href = "index.html" }, 800);
+      setTimeout(function () { window.location.href = "index.html"}, 800);
     }
     if ($('body').attr('id') == "projects") {
       projectsPackup();
@@ -109,11 +104,11 @@ $(document).ready(function(){
   $('#projectsbutton').click(function () {
     if ($('body').attr('id') == "about") {
       aboutPackup();
-      setTimeout(function () { window.location.href = "projects.html" }, 800);
+      setTimeout(function () { window.location.href = "projects.html"}, 800);
     }
     if ($('body').attr('id') == "home") {
       homePackup();
-      setTimeout(function () { window.location.href = "projects.html"; }, 800);
+      setTimeout(function () { window.location.href = "projects.html"}, 800);
     }
     if ($('body').attr('id') == "contact") {
       contactPackup();
