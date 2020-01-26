@@ -88,6 +88,7 @@
     		<defs>
     			<filter id="goo">
     				<feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+            <!-- consider commenting out for a sick blur effect -->
     				<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
     				<feBlend in2="goo" in="SourceGraphic" result="mix" />
     			</filter>
