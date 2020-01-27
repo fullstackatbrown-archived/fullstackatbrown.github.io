@@ -44,6 +44,17 @@ $(document).ready(function(){
     }
   }
 
+  // Contact page
+  if ($('body').attr('id') == "application") {
+    for (let i = 1; i < 7; i++) {
+      setTimeout(function(){
+        $("#" + i).animate({
+          opacity: 1
+        }, 850)
+      }, (i-1)*100);
+    }
+  }
+
   // Animate footer
   $("footer").animate({
     opacity: 1

@@ -71,8 +71,22 @@ function contactPackup() {
   }
 }
 
+// Contact Page
+function applicationPackup() {
+  closeHeader();
+  closeFooter();
+  $(".landingcontainer").animate({
+    opacity: 0
+  }, 550)
+}
+
 
 $(document).ready(function(){
+  $('#applicationlink').click(function(){
+    projectsPackup();
+    setTimeout(function () { window.location.href = "application.html"}, 800);
+  })
+
   $('#aboutbutton').click(function(){
     if ($('body').attr('id') == "home") {
       homePackup();
@@ -84,6 +98,10 @@ $(document).ready(function(){
     }
     if ($('body').attr('id') == "contact") {
       contactPackup();
+      setTimeout(function(){window.location.href="about.html"}, 800);
+    }
+    if ($('body').attr('id') == "application") {
+      applicationPackup();
       setTimeout(function(){window.location.href="about.html"}, 800);
     }
   })
@@ -100,6 +118,10 @@ $(document).ready(function(){
       contactPackup();
       setTimeout(function(){window.location.href="index.html"}, 800);
     }
+    if ($('body').attr('id') == "application") {
+      applicationPackup();
+      setTimeout(function(){window.location.href="index.html"}, 800);
+    }
   })
   $('#projectsbutton').click(function () {
     if ($('body').attr('id') == "about") {
@@ -114,6 +136,10 @@ $(document).ready(function(){
       contactPackup();
       setTimeout(function(){window.location.href="projects.html"}, 800);
     }
+    if ($('body').attr('id') == "application") {
+      applicationPackup();
+      setTimeout(function(){window.location.href="projects.html"}, 800);
+    }
   })
   $('#contactbutton').click(function(){
     if ($('body').attr('id') == "about") {
@@ -126,6 +152,10 @@ $(document).ready(function(){
     }
     if ($('body').attr('id') == "projects") {
       projectsPackup();
+      setTimeout(function(){window.location.href="contact.html";}, 800);
+    }
+    if ($('body').attr('id') == "application") {
+      applicationPackup();
       setTimeout(function(){window.location.href="contact.html";}, 800);
     }
   })

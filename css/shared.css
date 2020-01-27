@@ -209,6 +209,15 @@ div {
   height: auto;
 }
 
+.link {
+  color: #269dff;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.link:hover {
+  opacity: 0.6;
+}
+
 .submissionresponse {
   z-index: -1;
   font-family: 'Raleway', sans-serif;

@@ -1,0 +1,124 @@
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800|Roboto+Slab:100,200,300,400,500,600,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/hover.css">
+  <link rel="stylesheet" href="css/application.css">
+  <link rel="stylesheet" href="css/shared.css">
+  <link rel="stylesheet" href="css/overlay.css">
+  <script type="text/javascript"> var submitted=false;</script>
+  <script type="text/javascript" src="javascript/application.js"></script>
+  <script type="text/javascript" src="javascript/navigation.js"></script>
+  <script type="text/javascript" src="javascript/loading.js"></script>
+  <script type="text/javascript" src="javascript/header.js"></script>
+  <link rel="icon" type="image/png" href="images/f.png">
+  <title>Full Stack at Brown</title>
+</head>
+<div id="overlay"></div>
+<div id="navmenu">
+  <div class="navcontent">
+    <a id="aboutbutton" class="hvr-sweep-to-right"> About </a>
+    <a id="projectsbutton" class="hvr-sweep-to-right"> Projects </a>
+    <a id="contactbutton" class="hvr-sweep-to-right"> Contact </a>
+    <span></span>
+  </div>
+</div>
+<div class="headerblock"></div>
+<header class="header">
+  <div class="headercontent">
+    <div id="homebutton" class="logocontainer hvr-sweep-to-right">
+      <img id="logo" class="logo" src="images/fsab.png"/>
+    </div>
+    <div>
+      <div id="nav-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+</header>
+<body id="application">
+<div class="spacer"></div>
+<div class="landingcontainer">
+  <div class="landingtextcontainer">
+    <h1 style="opacity: 0" id="2">
+      Apply
+    </h1>
+    <div style="margin-top: 20px;">
+      <sub style="opacity: 0" id="3">
+        If you would like to be a part of Full Stack at Brown, please fill out the application below
+      </sub>
+    </div>
+    <div class="submissionresponse"> Your response has been recorded </div>
+    <div style="opacity: 0; margin-bottom: 70px" id="4">
+      <form class="gform" name="gform" id="gform" enctype="text/plain"
+            action="https://docs.google.com/forms/d/e/1FAIpQLSeQJtjstRkNmsuBdQCwLmERb2xQ_m7YQEzGcBuMAxefMyn2aQ/formResponse?"
+            target="hidden_iframe">
+        <div class="inputrow">
+          <input class="input" required type="text" placeholder="Name" name="entry.1889718613" id="entry.1889718613">
+          <input class="input" required type="text" placeholder="Email" name="entry.13112298" id="entry.13112298">
+        </div>
+        <div style="margin-top: 40px">
+          <h5 style="opacity: 0.75">
+            FSAB Team Structure
+          </h5>
+          <sub style="font-size: 20px" id="3">
+            Full Stack at Brown is structured into two main groups, the activities
+            team and the project team.
+          </sub>
+        </div>
+        <div style="margin-top: 25px">
+          <h5 style="opacity: 0.75">
+            The Project Team
+          </h5>
+          <sub style="font-size: 20px" id="3">
+            The project team will build skills and portfolio pieces by creating
+            software proposed to the club by members of the Brown community.
+            This larger team is split up into different subcommittees by
+            expertise. Members may simultaneously belong to multiple different
+            project subcommittees so if you feel like you may fit into several
+            different teams, feel free to indicate so.
+          </sub>
+          <ul>
+            <li>Design Team</li>
+            <li>Frontend Team</li>
+            <li>Backend Team</li>
+          </ul>
+        </div>
+        <div style="margin-top: 25px">
+          <h5 style="opacity: 0.75">
+            The Activities Team
+          </h5>
+          <sub style="font-size: 20px" id="3">
+            The activities team will be responsible for engaging with the Brown community and consists of two subcommittees:
+          </sub>
+          <ul>
+            <li>Outreach</li>
+            <li>Events</li>
+          </ul>
+        </div>
+        <div style="margin-top: 10px; margin-bottom: 10px">
+          <sub style="font-size: 20px" id="3">
+            The outreach team will be responsible for reaching out to Brown organizations and individuals to find interesting projects as well as reaching out to corporate partners for event sponsorships. The events team will be responsible for organizing workshops and a possible hackathon.
+          </sub>
+        </div>
+        <input class="input" required type="text" placeholder="What team(s) are you applying for (comma separated)" name="entry.1139185277" id="entry.1139185277">
+        <input class="input" type="text" placeholder="Link to portfolio website (optional)" name="entry.1832717467" id="entry.1832717467">
+        <textarea class="input" required placeholder="Why do you want to join Full Stack at Brown?" name="entry.1365480884" id="entry.1365480884"></textarea>
+        <div><input type="submit" class="submit" value="Submit"></div>
+      </form>
+      <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+    </div>
+  </div>
+</div>
+</body>
+<footer>
+  <div class="footerCredit">
+    Created by
+    <img id="logo" class="logosmall" src="images/fsab.png"/>
+  </div>
+</footer>
+</html>
